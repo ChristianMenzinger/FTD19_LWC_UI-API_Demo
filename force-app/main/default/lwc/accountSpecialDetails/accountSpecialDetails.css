@@ -1,0 +1,14 @@
+ul {
+    width: 100%;
+}
+
+li {
+    padding: 0.25rem;
+    margin: 0.25rem;
+    width: 300px;
+    display: inline-block;
+}
+
+.field {
+    padding: 0.25rem;
+}

@@ -1,0 +1,33 @@
+<template>
+  <div>
+    <ul class="slds-has-dividers_around-space">
+
+      <!-- outer loop to create one card for each record -->
+      <template for:each={recordList} for:item="record">
+        <li class="slds-item" key={record.id}>
+          <lightning-card>
+            <div slot="title" class="slds-text-align_center">
+              <a href={record.relativeLink}>{record.name}</a>
+            </div>
+
+            <!-- loop to display all fields/values for record -->
+            <template for:each={record.fieldValues} for:item="field">
+              <article key={field.uniqueKey} class="field slds-tile slds-tile_board">
+                <p
+                  class="slds-truncate slds-text-title_caps"
+                  title={field.fieldName}>
+                  {field.fieldName}
+                </p>
+                <p class="slds-truncate" title={field.fieldValue}>
+                  {field.fieldValue}&nbsp;
+                </p>
+              </article>
+            </template>
+
+          </lightning-card>
+        </li>
+      </template>
+
+    </ul>
+  </div>
+</template>

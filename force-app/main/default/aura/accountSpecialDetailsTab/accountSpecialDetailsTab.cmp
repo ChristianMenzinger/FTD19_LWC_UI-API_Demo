@@ -1,0 +1,4 @@
+<aura:component implements="force:appHostable">
+    <!-- workaround before Winter '20 to add Lightning Web Component to a Tab-->
+    <c:accountSpecialDetails />
+</aura:component>	
